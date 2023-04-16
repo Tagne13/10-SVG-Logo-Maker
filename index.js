@@ -44,7 +44,7 @@ function writeToFile(fileName, data) {
 
 function init() {
     inquirer.prompt(questions).then(function (data) {
-        let fileName = "logo.svg";
+        let fileName = "./samples/logo.svg";
         writeToFile(fileName, data);
     });
 }
