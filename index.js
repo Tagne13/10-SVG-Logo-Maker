@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateLogo = require('./util/generateLogo.js');
+const generateLogo = require('./util/generateLogo.js');
+const fileName = "./samples/logo.svg";
 const { wrap } = require('module');
-const {Circle, Triangle, Square} = require('./lib/shapes.js');
+// const {Circle, Triangle, Square} = require('./lib/shapes.js');
 
 const questions = [
     {
@@ -31,41 +32,21 @@ const questions = [
         name: 'color'
     },
 ];
-var generateLogo = ("");
 
-function generateLogo(response) {
-    if (response.shape === 'Circle') {
-        let userLogo = new Circle (response.text, response.textColor, response.color)
-        return userLogo.render()
-    } 
-    if (response.shape === 'Square') {
-        let userLogo = new Square (response.text, response.textColor, response.color)
-        return userLogo.render()
-    }
-    if (response.shape === 'Triangle') {
-        let userLogo = new Triangle (response.text, response.textColor, response.color)
-        return userLogo.render()
-    }
-};
-
-function writeToFile(fileName, response) {
-    let content = generateLogo(response);
-    fs.writeFile(fileName, content, function (error) {
-        if (error) {
-            return console.log(error);
-        } else {
-            return console.log('Generated logo.svg!');
-        }
-    });
+function createSVG(response) {
+    const svg = generateLogo(response);
+    fs.writeFile(fileName, svg, ()=> console.log('Generated logo.svg!')); 
 }
 
 function init() {
-    inquirer.prompt(questions).then(function (response) {
-        let fileName = "./samples/logo.svg";
-        writeToFile(fileName, response);
+    inquirer
+    .prompt(questions)
+    .then((response) => {
+        createSVG(response);
+        })
+    .catch(err => {
+        console.log(err)
     });
 }
 
 init();
-
-// module.exports = generateLogo;
