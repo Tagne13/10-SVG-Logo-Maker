@@ -3,7 +3,6 @@ const fs = require('fs');
 const generateLogo = require('./util/generateLogo.js');
 const fileName = "./samples/logo.svg";
 const { wrap } = require('module');
-// const {Circle, Triangle, Square} = require('./lib/shapes.js');
 
 const questions = [
     {
@@ -35,7 +34,7 @@ const questions = [
 
 function createSVG(response) {
     const svg = generateLogo(response);
-    fs.writeFile(fileName, svg, ()=> console.log('Generated logo.svg!')); 
+    fs.writeFile(fileName, svg, () => console.log('Generated logo.svg!')); 
 }
 
 function init() {

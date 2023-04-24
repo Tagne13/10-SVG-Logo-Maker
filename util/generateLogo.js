@@ -1,7 +1,6 @@
-const Circle = require('./circle.js');
-const Square = require('./square.js');
-const Triangle = require('./triangle.js');
-// const {Circle, Triangle, Square} = require('./lib/shapes.js');
+const Circle = require('../lib/circle.js');
+const Square = require('../lib/square.js');
+const Triangle = require('../lib/triangle.js');
 
 function generateLogo(response) {
     if (response.shape === 'Circle') {
