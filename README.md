@@ -1,7 +1,7 @@
 # SVG Logo Generator
 
   
-    ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
     
 
   ## Table of Contents
@@ -9,9 +9,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * 
-    [MIT](https://choosealicense.com/licenses/MIT)
-    
+  * [MIT](https://choosealicense.com/licenses/MIT)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -28,14 +26,18 @@
 
   Change directories toy uor new project folder in the terminal/command line. Invoke the app by typing 'node index.js' or by typing the script npm start in the terminal/command line. You will be asked a series of questions before your logo is generated. Once all prompts have been answered with accepted values, your new logo will be generated with the file name 'logo.svg' in the 'samples' folder. Refer back to the video posted in this README as needed.
 
+  [Video Demonstration](https://drive.google.com/file/d/1MTWxba4LGe2pIXwj0XjZke1dpy7-vnk-/view)
+
+  ![Screenshot](images/Screenshot.png)
+
+  ![Sample](samples/logo.svg)
+
   ## [License](#table-of-contents)
 
-  
-    
-    The application is covered under the following license:
+  The application is covered under the following license:
     
     
-    [MIT](https://choosealicense.com/licenses/MIT)
+  [MIT](https://choosealicense.com/licenses/MIT)
     
     
 
